@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="w-[720px] mx-auto font-Manrope">
+    <!-- head  -->
+    <div id="head" class="flex flex-col gap-4 items-center mt-10">
+      <h1 class="font-bold text-[26px]">ХИЙХ ЗҮЙЛС</h1>
+      <span class="font-medium text-[16px]">0/5 дууссан</span>
+      <div id="inputContai" class="w-full flex gap-4">
+        <input
+          id="todoInput"
+          type="text"
+          placeholder="Юу хийх вэ?"
+          class="text-[#C3C1E5] h-[38px] border border-[#6C63FF] rounded-[5px] px-4 w-full"
+        />
+        <button
+          class="h-[38px] bg-[#6C63FF] text-white rounded-[5px] px-4"
+          onclick="addTodo()"
+        >
+          Нэмэх
+        </button>
+        <button
+          class="h-[38px] bg-[#6C63FF] text-white rounded-[5px] px-4"
+          onclick="filterTodo()"
+        >
+          Filter
+        </button>
+      </div>
+    </div>
+    <!-- body  -->
+    <div id="body" class="mx-auto w-[520px] flex flex-col gap-[17px] mt-10">
+      <div id="listItem" class="w-full flex gap-3 items-center w-full">
+        <!-- <div
+          class="w-[26px] h-[26px] border-1 border-[#6C63FF] bg-[#6C63FF] flex justify-center items-center rounded-[5px]"
+        >
+          <div
+            class="w-[18px] h-[18px] bg-[url('./check.png')] bg-cover bg-center"
+          ></div>
+        </div> -->
+
+        <div
+          id="check"
+          class="w-[26px] h-[26px] border border-[#6C63FF] rounded-[5px]"
+        ></div>
+        <h1 id="todoTitle" class="w-full"></h1>
+        <div
+          id="delete"
+          class="w-[18px] h-[18px] bg-[url('/icon/trash.png')] bg-cover bg-center"
+        ></div>
+      </div>
+      <hr class="border-[#C3C1E5]" />
+      <ul id="todoList" class="mt-4 flex flex-col gap-3"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
